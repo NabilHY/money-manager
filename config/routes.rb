@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  devise_for :users, :controllers => { registrations: 'registrations' }
+  get 'static_pages/splash_page'
+  get 'static_pages/dashboard'
+  root 'static_pages#splash_page'
 end
