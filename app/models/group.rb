@@ -4,5 +4,4 @@ class Group < ApplicationRecord
 
   validates :name, presence: { strict: true }
   validates :icon, presence: { strict: true }
-  
 end

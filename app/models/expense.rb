@@ -4,5 +4,4 @@ class Expense < ApplicationRecord
 
   validates :name, presence: { strict: true }
   validates :amount, presence: { strict: true }
-
 end
