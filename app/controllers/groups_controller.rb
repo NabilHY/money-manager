@@ -9,6 +9,18 @@ class GroupsController < ApplicationController
   end
 
   def new
+    @group = Group.new
+  end
+
+  def create
+    @group = current_user.groups.new(group_params)
+    respond_to do |format|
+      if @group.save
+        format.html { redirect_to groups_path, notice: 'Group was successfully created.' }
+      else
+        format.html { render :new, status: :unprocessable_entity }
+      end
+    end
   end
 
   def destroy
