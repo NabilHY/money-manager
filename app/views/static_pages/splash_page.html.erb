@@ -1,15 +1,17 @@
-<div class="parent">
-    <div class="card" id="leftToRight">
-        <h1>Money Manager</h1>
-        <% if current_user %>
-          <p class="text-white">Welcome <%= current_user.name.capitalize %></p>
-          <%= link_to 'Transactions', static_pages_dashboard_path, class: 'btn btn-primary' %>
-          <%= link_to "Log out", destroy_user_session_path, data: { turbo_method: :delete }, class: 'btn btn-secondary'  %>
-        <% else %>
-        <div class="buttons">
-          <%= link_to "Log in", new_user_session_path, class: "btn btn-primary" %>
-          <%= link_to "Register", new_user_registration_path, class: "btn btn-secondary"  %>
-        </div>
-        <% end %>
-    </div>
+<div class="layouts">
+  <div class="parent">
+      <div class="card" id="leftToRight">
+          <h1>Money Manager</h1>
+          <% if current_user %>
+            <p class="text-white">Welcome <%= current_user.name.capitalize %></p>
+            <%= link_to 'Groups', groups_path, class: 'btn btn-primary' %>
+            <%= link_to "Log out", destroy_user_session_path, data: { turbo_method: :delete }, class: 'btn btn-secondary'  %>
+          <% else %>
+          <div class="buttons">
+            <%= link_to "Log in", new_user_session_path, class: "btn btn-primary" %>
+            <%= link_to "Register", new_user_registration_path, class: "btn btn-secondary"  %>
+          </div>
+          <% end %>
+      </div>
+  </div>
 </div>

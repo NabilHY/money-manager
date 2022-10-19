@@ -7,7 +7,7 @@ $main-font: 'Josefin Sans', sans-serif;
   box-sizing: border-box;
 }
 
-body {
+.layouts {
   background-image: url("blue-background.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -19,6 +19,11 @@ body {
 
   h2 {
     color: #fff;
+  }
+  .arrow {
+    color: #fff;
+    margin: 1%;
+    text-decoration: none;
   }
 }
 
@@ -55,7 +60,7 @@ body {
 
   .card {
     width: 400px;
-    height: 400px;
+    height: 325px;
     color: #000;
     background-color: #3979c3;
     border-radius: 10px;
@@ -95,4 +100,9 @@ body {
 @keyframes run {
   0% { margin-left: -98%; }
   100% { margin-left: 0%; }
+}
+
+.thumbnail {
+  width: 100px;
+  height: 100px;
 }
