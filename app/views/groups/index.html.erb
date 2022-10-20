@@ -17,10 +17,13 @@
                 <b>Amount :</b>
                 <p> <%= group.sum %> $</p>
               </div>
-              <a href="#" class="btn btn-primary">All Transactions</a>
+                <%= link_to "Transactions", group_expenses_path(group.id), class:"btn btn-primary" %>
             </div>
           </div>
         </div>
     <% end %>
+  </div>
+  <div class="d-flex justify-content-center mt-5 mb-5">
+    <%= link_to "New Category", new_group_path, class: "btn btn-success" %>
   </div>
 </div>

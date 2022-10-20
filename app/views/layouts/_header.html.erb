@@ -4,13 +4,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav justify-content-end">
-      <li class="nav-item active">
-        <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <%= link_to "New group", new_group_path, class: "nav-link" %>
-      </li>
+    <ul class="navbar-nav d-flex justify-content-between">
       <li class="nav-item">
         <%= link_to "Log out", destroy_user_session_path, data: { turbo_method: :delete }, class: 'nav-link'  %>
       </li>

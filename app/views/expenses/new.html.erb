@@ -1,0 +1,17 @@
+<%= render 'layouts/header' %>
+<h1 class="d-flex justify-content-center mt-3">Add a new expense </h1>
+<%= form_with model: @expense, url: group_expenses_path(@group.id), local: true, scope: :expense do |f| %>    
+    <div class="form-group m-3">
+        <%= f.label :name, class:"form-label" %>
+        <%= f.text_field :name, class: "form-control" %>
+    </div>
+    <div class="form-group m-3">
+        <%= f.label :amount %>
+        <%= f.number_field :amount, class: "form-control", step: 1, min: "0"  %>
+    </div>
+    <%= f.hidden_field :group_id, value: @group.id  %>
+    <div class="d-flex justify-content-center">
+        <%= f.submit "Add Expense", class: "btn btn-primary" %>
+    </div>
+
+<% end %>

@@ -1,13 +1,15 @@
 <%= render 'layouts/header' %>
-<h1>Add new Group</h1>
+<h1 class="d-flex justify-content-center mt-3">Add new Group</h1>
 <%= form_with model: @group, url: groups_path, method: :post, local: true, scope: :group do |f| %>
-    <div class="form-group">
+    <div class="form-group m-3">
         <%= f.label :name %>
         <%= f.text_field :name, class: "form-control" %>
     </div>
-    <div class="form-group">
+    <div class="form-group m-3">
         <%= f.label :icon %>
         <%= f.text_field :icon, class: "form-control" %>
     </div>
-    <%= f.submit "Create Group", class: "btn btn-primary" %>
+    <div class="d-flex justify-content-center">
+        <%= f.submit "Create Group", class: "btn btn-primary" %>
+    </div>
 <% end %>
