@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MoneyManager</title>
+    <title>Money Manager</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -16,9 +16,13 @@
   </head>
 
   <body>
-    <%= yield %>
     <% if notice %>
-        <p class="notice"><%= notice %></p>
+      <% flash.each do |key, message| %>
+        <div class="alert <%= flash_class(key) %> alert-dismissible fade show text-center" role="alert">
+          <%= message %>
+        </div>
+      <% end %>
     <% end %>
+    <%= yield %>
   </body>
 </html>

@@ -1,14 +1,14 @@
 <%= render 'layouts/header' %>
-<div class="container">
+<div class="container mt-2">
+    <%= link_to "", groups_path, class:'fa-solid fa-arrow-left arrow'%>
     <div class="d-flex justify-content-between align-items-center gap-5 mt-4 mb-4">
         <%= image_tag @group.icon, alt: 'icon', class: 'thumbnail' %>
         <div class="d-flex align-items-center justify-content-center gap-2">
             <h4>Total Money Spent :</h4>
             <b class="display-4"><%= @group.sum %>$</b>
         </div>
-        
     </div>
-  <div class="row">
+    <div class="row">
         <% @expenses.each do |expense| %>
             <div class="col-12">
                 <div class="card mt-3 mb-3">

@@ -16,7 +16,7 @@ class ExpensesController < ApplicationController
       @expense = current_user.expenses.new(expense_params)
       respond_to do |format|
         if @expense.save
-         redirect_to group_expenses_path, notice: 'Expense was successfully created.'
+         redirect_to group_expenses_path
          return
         else
           format.html { render :new, status: :unprocessable_entity }

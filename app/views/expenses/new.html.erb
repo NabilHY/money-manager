@@ -1,4 +1,5 @@
 <%= render 'layouts/header' %>
+<%= link_to "", groups_path, class:'fa-solid fa-arrow-left arrow'%>
 <h1 class="d-flex justify-content-center mt-3">Add a new expense </h1>
 <%= form_with model: @expense, url: group_expenses_path(@group.id), local: true, scope: :expense do |f| %>    
     <div class="form-group m-3">

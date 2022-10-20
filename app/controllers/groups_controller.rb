@@ -16,7 +16,7 @@ class GroupsController < ApplicationController
     @group = current_user.groups.new(group_params)
     respond_to do |format|
       if @group.save
-        format.html { redirect_to groups_path, notice: 'Group was successfully created.' }
+        format.html { redirect_to groups_path }
       else
         format.html { render :new, status: :unprocessable_entity }
       end
