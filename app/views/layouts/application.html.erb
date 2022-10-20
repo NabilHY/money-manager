@@ -16,6 +16,7 @@
   </head>
 
   <body>
+    <%= yield %>
     <% if notice %>
       <% flash.each do |key, message| %>
         <div class="alert <%= flash_class(key) %> alert-dismissible fade show text-center" role="alert">
@@ -23,6 +24,5 @@
         </div>
       <% end %>
     <% end %>
-    <%= yield %>
   </body>
 </html>
