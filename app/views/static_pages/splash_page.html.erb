@@ -1,7 +1,7 @@
 <div class="layouts">
   <div class="parent">
       <div class="card" id="leftToRight">
-          <h1>Money Manager</h1>
+          <h2>Money Manager</h2>
           <% if current_user %>
             <p class="text-white">Welcome <%= current_user.name.capitalize %></p>
             <%= link_to 'Groups', groups_path, class: 'btn btn-primary' %>
