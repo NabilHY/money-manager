@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'StaticPages', type: :request do
   describe 'GET /splash_page' do
-    before(:each) {get static_pages_splash_page_path}
+    before(:each) { get static_pages_splash_page_path }
 
     it 'is a success' do
       expect(response).to have_http_status(:success)
@@ -16,5 +16,4 @@ RSpec.describe 'StaticPages', type: :request do
       expect(response.body).to include('Money Manager')
     end
   end
-
 end
