@@ -2,7 +2,7 @@ require 'rails_helper'
 require 'ffi'
 
 RSpec.describe User, type: :model do
-  subject { User.new(name: 'user1') }
+  subject { User.new(name: 'user1', email: 'user@mail.com', password: 'password') }
 
   it 'is valid with valid attributes' do
     expect(subject).to be_valid

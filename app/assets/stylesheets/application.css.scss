@@ -13,12 +13,6 @@ $main-font: 'Josefin Sans', sans-serif;
   background-repeat: no-repeat;
   background-size: cover;
 
-  .arrow {
-    color: #fff;
-    margin: 1%;
-    text-decoration: none;
-  }
-
   h1 {
     color: #fff;
   }
@@ -26,6 +20,12 @@ $main-font: 'Josefin Sans', sans-serif;
   h2 {
     color: #fff;
   }
+}
+
+.arrow {
+  color: #fff;
+  margin: 2%;
+  text-decoration: none;
 }
 
 #error_explanation {
