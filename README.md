@@ -81,9 +81,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Kudos to Gregoire Vella for the great looking [template](https://www.behance.net/gregoirevella) that this application's design was inspired from
 
 ## 📝 License
 
