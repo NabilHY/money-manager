@@ -1,0 +1,160 @@
+@import "partials/*";
+$main-font: 'Josefin Sans', sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.layouts {
+  background-image: url("blue-background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .arrow {
+    color: #fff;
+    margin: 1%;
+    text-decoration: none;
+  }
+
+  h1 {
+    color: #fff;
+  }
+
+  h2 {
+    color: #fff;
+  }
+}
+
+#error_explanation {
+  color: #fff;
+  display: block;
+  background-color: rgba(255, 0, 0, 0.6);
+  padding: 2%;
+  border-radius: 10px;
+  overflow: hidden;
+
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+}
+
+.parent {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: $main-font;
+
+  form {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+
+    label {
+      color: #fff;
+    }
+
+    input {
+      border-radius: 10px;
+      border-style: none;
+    }
+
+    h2 {
+      color: #fff;
+    }
+
+    .actions {
+      margin: 0 auto;
+    }
+  }
+
+  .card {
+    width: 300px;
+    height: 300px;
+    color: #000;
+    background-color: #3979c3;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 5%;
+  }
+
+  .new_user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+#leftToRight {
+  animation: run ease 3s;
+  -webkit-animation: run ease 3s;
+  -moz-animation: run ease 3s;
+  -o-animation: run ease 3s;
+  -ms-animation: run ease 3s;
+}
+
+@keyframes run {
+  0% { margin-left: -98%; }
+  100% { margin-left: 0%; }
+}
+
+.thumbnail {
+  width: 100px;
+  height: 100px;
+}
+
+.fa-solid {
+  color: #000;
+  width: 20px;
+  height: 20px;
+}
+
+.hideMe {
+  -moz-animation: cssanimation 0s ease-in 5s forwards;
+
+  /* Firefox */
+  -webkit-animation: cssanimation 0s ease-in 5s forwards;
+
+  /* Safari and Chrome */
+  -o-animation: cssanimation 0s ease-in 5s forwards;
+
+  /* Opera */
+  animation: cssAnimation 0s ease-in 5s forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes cssAnimation {
+  to {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+}
+
+@-webkit-keyframes cssAnimation {
+  to {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+}

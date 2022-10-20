@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_17_160551) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_17_154439) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -18,7 +18,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_17_160551) do
     t.bigint "author_id", null: false
     t.bigint "group_id", null: false
     t.string "name"
-    t.string "amount"
+    t.decimal "amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["author_id"], name: "index_expenses_on_author_id"
