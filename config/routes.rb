@@ -5,6 +5,5 @@ Rails.application.routes.draw do
     resources :expenses, only: [:index, :new, :create]
   end
   get 'static_pages/splash_page'
-  get 'static_pages/dashboard'
   root 'static_pages#splash_page'
 end
