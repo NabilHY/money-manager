@@ -2,23 +2,23 @@ require 'rails_helper'
 require 'ffi'
 
 RSpec.describe Expense, type: :model do
-  subject do
-    user1 = User.new(name: 'user1')
-    group1 = Group.new(author: user1, name: 'group1', icon: 'icon1')
-    Expense.new(author: user1, group: group1, name: 'expense1', amount: 100)
+  before(:each) do
+    @user1 = User.new(name: 'User', email: 'user1@mail.com', password: 'password')
+    @group1 = Group.new(author: @user1, name: 'group1', icon: 'icon1')
+    @expense1 = Expense.new(author: @user1, group_id: @group1.id, name: 'expense1', amount: 100)
   end
 
   it 'is valid with valid attributes' do
-    expect(subject).to be_valid
+    expect(@expense1).to be_valid
   end
 
-  it 'throws an error(Name cant be blank) if the name is not provided' do
-    subject.name = nil
-    expect { subject.save! }.to raise_error(ActiveModel::StrictValidationFailed)
+  it 'not valid without a name' do
+    @expense1.name = nil
+    expect { @expense1.save! }.to raise_error(ActiveModel::StrictValidationFailed)
   end
 
-  it 'throws an error(Amount cant be blank) if the amount is not provided' do
-    subject.amount = nil
-    expect { subject.save! }.to raise_error(ActiveModel::StrictValidationFailed)
+  it 'not valid without an amount' do
+    @expense1.amount = nil
+    expect { @expense1.save! }.to raise_error(ActiveModel::StrictValidationFailed)
   end
 end
