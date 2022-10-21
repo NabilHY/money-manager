@@ -6,6 +6,11 @@ $main-font: 'Josefin Sans', sans-serif;
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
 .layouts {
   background-image: url("blue-background.jpg");
   background-position: center;
