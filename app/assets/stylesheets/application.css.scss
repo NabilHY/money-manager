@@ -21,19 +21,11 @@ a {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
-  h1 {
-    color: #fff;
-  }
-
-  h2 {
-    color: #fff;
-  }
+  color: $tertiary-color;
 }
 
 nav {
   background-color: $primary-color;
-  display: flex;
 }
 
 .arrow {
@@ -63,25 +55,16 @@ nav {
   align-items: center;
   flex-direction: column;
   font-family: $main-font;
-
+  color: $tertiary-color;
   form {
     margin: 0 auto;
     display: flex;
     justify-content: center;
 
-    label {
-      color: #fff;
-    }
-
     input {
       border-radius: 10px;
       border-style: none;
     }
-
-    h2 {
-      color: #fff;
-    }
-
     .actions {
       margin: 0 auto;
     }
@@ -90,7 +73,7 @@ nav {
   .card {
     width: 300px;
     height: 300px;
-    color: #000;
+    color: $tertiary-color;
     background-color: #3979c3;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -99,6 +82,11 @@ nav {
     justify-content: center;
     align-items: center;
     gap: 10px;
+  }
+
+  .anchor {
+    color: $tertiary-color;
+    text-decoration: none;
   }
 
   .buttons {
@@ -121,6 +109,7 @@ nav {
 #page-container {
   position: relative;
   min-height: 100vh;
+  color: $tertiary-color;
   #content-wrap {
     padding-bottom: 2.5rem;
   }
@@ -134,7 +123,7 @@ nav {
   display: flex;
   justify-content: space-around;
   text-align: center;
-  padding: 2%;
+  padding: 1%;
   a {
     color: #fff;
     text-decoration: none;
