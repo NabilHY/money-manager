@@ -4,6 +4,13 @@ Rails.application.routes.draw do
   resources :groups, only: [:index, :new, :create ] do
     resources :expenses, only: [:index, :new, :create]
   end
+
   get 'static_pages/splash_page'
-  root 'static_pages#splash_page'
+
+  authenticated :user do
+    root :to => 'groups#index', as: :authenticated_root
+  end
+
+  root to: "static_pages#splash_page"
+
 end
