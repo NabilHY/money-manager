@@ -1,4 +1,7 @@
 $main-font: 'Josefin Sans', sans-serif;
+$primary-color: #3778c2;
+$secondary-color: #5fb523;
+$tertiary-color: #434b54;
 
 * {
   margin: 0;
@@ -24,6 +27,10 @@ a {
   h2 {
     color: #fff;
   }
+}
+
+nav {
+  background-color: $primary-color;
 }
 
 .arrow {
