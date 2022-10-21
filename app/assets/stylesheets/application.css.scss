@@ -1,9 +1,11 @@
-$main-font: 'Josefin Sans', sans-serif;
+@import url('http://fonts.cdnfonts.com/css/proxima-nova-2');
+$main-font: 'Proxima Nova', sans-serif;
 $primary-color: #3778c2;
 $secondary-color: #5fb523;
 $tertiary-color: #434b54;
 
 * {
+ font-family: $main-font;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -115,17 +117,23 @@ nav {
   }
 }
 
+#page-container {
+  position: relative;
+  min-height: 100vh;
+  #content-wrap {
+    padding-bottom: 2.5rem;
+  }
+}
+
 .new-bar {
+  position: absolute;
   bottom: 0;
-  position: fixed;
   width: 100%;
   background-color: $secondary-color;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  text-align: center;
   padding: 2%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  z-index: 1;
   a {
     color: #fff;
     text-decoration: none;
