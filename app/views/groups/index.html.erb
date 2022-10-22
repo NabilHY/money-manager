@@ -1,0 +1,32 @@
+<%= render 'layouts/header' %>
+<div id="page-container">
+  <div class="container mt-2" id="content-wrap">
+    <%= link_to "", root_path, class:'fa-solid fa-arrow-left arrow'%>
+    <div class="row mb-5 mt-5">
+      <% @groups.each do |group| %>
+          <div class="col-12">
+            <div class="card mt-3">
+              <div class="card-body d-flex flex-row justify-content-between align-items-center">
+                <div class="d-flex flex-row align-items-center gap-4">
+                  <%= image_tag group.icon, alt: 'icon', class: 'thumbnail' %>
+                  <div class="align-items-center">
+                  <%= link_to group_expenses_path(group.id), class: "anchor" do %>
+                    <h5 class="card-title"><%= group.name %></h5>
+                  <% end %>
+                  <b>Created at :</b>
+                  <p><%= (group.created_at).to_fs(:short) %></p>
+                  </div>
+                </div>
+                <div>
+                  <b>Amount: <%= group.sum %> $</b>
+                </div>
+              </div>
+            </div>
+          </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="new-bar">
+    <%= link_to "New Category", new_group_path %>
+  </div>
+</div>

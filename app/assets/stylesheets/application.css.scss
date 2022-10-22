@@ -1,0 +1,204 @@
+@import url('http://fonts.cdnfonts.com/css/proxima-nova-2');
+@import url('http://fonts.cdnfonts.com/css/fertigo');
+$main-font: 'Proxima Nova', sans-serif;
+$primary-color: #3778c2;
+$secondary-color: #5fb523;
+$tertiary-color: #434b54;
+
+* {
+  font-family: $main-font;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.layouts {
+  background-image: url("blue-background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $tertiary-color;
+}
+
+h2 {
+  font-family: 'Fertigo', sans-serif;
+  font-size: 3em;
+  text-align: center;
+}
+
+nav {
+  background-color: $primary-color;
+}
+
+.arrow {
+  color: #fff;
+  margin: 2%;
+  text-decoration: none;
+}
+
+#error_explanation {
+  color: #fff;
+  display: block;
+  background-color: rgba(255, 0, 0, 0.6);
+  padding: 2%;
+  border-radius: 10px;
+  overflow: hidden;
+
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+}
+
+.new-bar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: $secondary-color;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding: 1%;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #fff;
+    padding: 1% 20%;
+  }
+}
+
+.parent {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: $main-font;
+  color: $tertiary-color;
+
+  form {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+
+    input {
+      border-radius: 10px;
+      border-style: none;
+    }
+
+    .actions {
+      margin: 0 auto;
+    }
+  }
+
+  .card {
+    width: 90vw;
+    height: 90vh;
+    color: $tertiary-color;
+    background-color: #3979c3;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 175px;
+  }
+
+  .anchor {
+    color: $tertiary-color;
+    text-decoration: none;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-top: 5%;
+    width: 80%;
+
+    a {
+      width: 100%;
+    }
+  }
+
+  .new_user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+  color: $tertiary-color;
+
+  #content-wrap {
+    padding-bottom: 2.5rem;
+  }
+}
+
+#leftToRight {
+  animation: run ease 3s;
+  -webkit-animation: run ease 3s;
+  -moz-animation: run ease 3s;
+  -o-animation: run ease 3s;
+  -ms-animation: run ease 3s;
+}
+
+@keyframes run {
+  0% { margin-left: -98%; }
+  100% { margin-left: 0%; }
+}
+
+.thumbnail {
+  width: 100px;
+  height: 100px;
+}
+
+.fa-solid {
+  color: #000;
+  width: 20px;
+  height: 20px;
+}
+
+.hideMe {
+  -moz-animation: cssanimation 0s ease-in 5s forwards;
+
+  /* Firefox */
+  -webkit-animation: cssanimation 0s ease-in 5s forwards;
+
+  /* Safari and Chrome */
+  -o-animation: cssanimation 0s ease-in 5s forwards;
+
+  /* Opera */
+  animation: cssAnimation 0s ease-in 5s forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes cssAnimation {
+  to {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+}
+
+@-webkit-keyframes cssAnimation {
+  to {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+}
